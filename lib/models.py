@@ -77,7 +77,8 @@ class MyAutoML:
     def fit(self, X, Y):
         n_estimators=10
         print "This is the model being used to fit:"
-        X=X.copy(order='C')
+        print self.model
+        #X=X.copy(order='C')
         self.model.fit(X,Y)
         # Train a calibration model postprocessor
         if self.task != 'regression' and self.postprocessor!=None:
